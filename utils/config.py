@@ -4,8 +4,6 @@ from torchvision import transforms
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 HR_SIZE = 256
 LR_SIZE = 128
-HEIGHT = 500
-WIDTH = 500
 
 # Path to the WorldStrat dataset (High Resolution)
 WorldStrat_path = "C:/Users/jiawe/Desktop/WorldStrat_hr"
