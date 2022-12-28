@@ -31,3 +31,9 @@ Adopts `SwinIR`.
 ## Output result
 ![image](./output.png)
 
+## Some of my thoughts
+
+Unlike other image super-resolution tasks, for example, anime and photography and other forms of art. Satellite imagery satellite should prioritize the accuracy over the high resolution. The image itself should avoid incorrect information.
+
+I suppose majority of the sr techniques devide the large image into small patches and process them separately. Maybe we can leverage the information from other patches to reach a better performance.
+
