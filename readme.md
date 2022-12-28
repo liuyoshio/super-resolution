@@ -2,7 +2,7 @@
 
 ## Datasets
 
-`datasets.py` take only the directory that contains high resolution image and  downgrade the image automatically to generate the pair dataset.
+`datasets.py` take only the directory that contains high resolution image and  downgrade the image automatically to generate the paired dataset.
 
 It also support passing the custom downgrading method through `downgrading_method`
 
