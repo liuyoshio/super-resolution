@@ -15,7 +15,7 @@ Adopts `SwinIR`.
 - Input size is (128, 128)
 - Output size is (256, 256)
 
-##### Note the output/intput ratio is not the upscaling factor. This is just for matching the models output.
+#### Note the output/intput ratio is not the upscaling factor. This is just for matching the models output.
 
 ## Config
 
