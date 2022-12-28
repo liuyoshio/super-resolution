@@ -15,6 +15,8 @@ Adopts `SwinIR`.
 - Input size is (128, 128)
 - Output size is (256, 256)
 
+##### Note 
+
 ## Config
 
 | Config          |                   |
