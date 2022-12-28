@@ -1,8 +1,8 @@
 import os
 import cv2
 from torch.utils.data import Dataset
-from utils.config import *
-
+from utils.config import WorldStrat_path, transform_hr, transform_lr
+from utils.helper import random_crop
 
 # custom dataset class
 # only takes the high resolution image directory
@@ -21,10 +21,10 @@ class MyDataset(Dataset):
         # Return the data and target at the given index
         img_hr = cv2.imread(os.path.join(self.directory_path, self.file_list[index]))
         img_hr = cv2.cvtColor(img_hr, cv2.COLOR_BGR2RGB)
-        img_hr = cv2.resize(img_hr, (256,256))
+        img_hr = cv2.resize(img_hr, (256, 256))
         
         if self.downgrading_method is None:
-            img_lr = cv2.resize(img_hr, (img_hr.shape[1] // 2, img_hr.shape[0] // 2), interpolation=cv2.INTER_AREA)
+            img_lr = cv2.resize(img_hr, (img_hr.shape[1] // 4, img_hr.shape[0] // 4), interpolation=cv2.INTER_AREA)
         else:
             img_lr = self.downgrading_method(img_hr)
             
