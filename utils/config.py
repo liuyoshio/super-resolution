@@ -6,7 +6,7 @@ HR_SIZE = 256
 LR_SIZE = 128
 
 # Path to the WorldStrat dataset (High Resolution)
-WorldStrat_path = "C:/Users/jiawe/Desktop/WorldStrat_hr"
+WorldStrat_path = "/Users/terry/Desktop/WorldStrat_hr"
 
 
 transform_hr = transforms.Compose([
