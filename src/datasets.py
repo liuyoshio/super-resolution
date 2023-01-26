@@ -21,10 +21,10 @@ class MyDataset(Dataset):
         # Return the data and target at the given index
         img_hr = cv2.imread(os.path.join(self.directory_path, self.file_list[index]))
         img_hr = cv2.cvtColor(img_hr, cv2.COLOR_BGR2RGB)
-        img_hr = cv2.resize(img_hr, (256, 256))
+        img_hr = cv2.resize(img_hr, (1088, 1088))
         
         if self.downgrading_method is None:
-            img_lr = cv2.resize(img_hr, (img_hr.shape[1] // 4, img_hr.shape[0] // 4), interpolation=cv2.INTER_AREA)
+            img_lr = cv2.resize(img_hr, (img_hr.shape[1] // 8, img_hr.shape[0] // 8), interpolation=cv2.INTER_AREA)
         else:
             img_lr = self.downgrading_method(img_hr)
             
